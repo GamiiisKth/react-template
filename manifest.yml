@@ -1,0 +1,12 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: Yushatemplatereact
+  buildpack: sdk-for-nodejs
+  command: npm prune --production && NODE_ENV=production npm start
+  memory: 256MB
+  domain: eu-de.mybluemix.net
+  host: yusha-template-react
+  env:
+    NPM_CONFIG_PRODUCTION : false
